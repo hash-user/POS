@@ -1,0 +1,63 @@
+main {
+	display: grid;
+	grid-template-columns: 240px auto;
+	position: relative;
+	z-index: 400px;
+}
+
+.nav-menu {
+	height: 840px;
+	background: #10143f;
+	overflow: hidden;
+}
+
+.nav-menu-menu {
+	text-align: left;
+	font-size: 9px;
+	font-weight: 700;
+	border-top: 0.05px solid #10143f;
+	border-bottom: 0.5px solid #10143f;
+	background: rgba(255, 255, 255, 1);
+	color: #10143f;
+	text-transform: uppercase;
+}
+
+.nav-menu-in {
+	display: flex;
+	align-items: center;
+}
+
+.nav-menu-in:hover{
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu-in a {
+	color: rgba(255, 255, 255, 1.0);
+}
+
+.nav-menu-in:hover a {
+	color: rgba(255, 255, 255, 1.0);
+	font-weight: 500;
+}
+
+
+.nav-menu ul{
+	margin-top: 100px;
+}
+
+.head {
+	background: #10143f;
+	color: rgba(255, 255, 255, 1.0);
+}
+
+.page-head {
+	font-size: 27px;
+}
+
+.page-head p {
+	font-size: 14px;
+}
+
+input[type="submit"] {
+	background:  #10143f;
+}

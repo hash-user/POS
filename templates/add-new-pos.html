@@ -1,0 +1,154 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static '/assets/css/registration.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+	<title></title>
+	{% load bootstrap5 %}
+  	{% bootstrap_css %}
+  	{% bootstrap_javascript %}
+
+</head>
+<body>
+	<header class="shadow-lg">
+		<nav class="navbar bg-body-tertiary">
+		  <div class="container-fluid ps-5">
+		    <a class="navbar-brand" href="/dashboard">
+		      <img src="{% static '/assets/img/OmniBSIC-Bank-logo.png' %}" alt="OmniBSIC-Bank-logo" height="50" width="100%">
+		    </a>
+		  </div>
+		</nav>
+	</header>
+	<main>
+		<section class="nav-menu">
+
+			<!-- Merchant -->
+
+			<div class=" nav-menu-menu ps-4 pt-1 pb-1">
+				<!--<img src="{% static '/assets/img/menu.png' %}" height="12" width="12" class="me-2"-->Dashboard
+			</div>
+			<div class="nav-menu-in">
+				<a href="dashboard" class=" text-decoration-none p-3"><img src="{% static '/assets/img/dashboard-icon.png' %}" height="18" width="18" class="ms-3 me-3">Dashboard</a>
+			</div>
+			<div class="nav-menu-in" >
+					<a href="searchinfo" class=" text-decoration-none p-3"><img src="{% static '/assets/img/search.png' %}" height="18" width="18" class="ms-3 me-3">Inquiry</a>
+				</div>
+			<div class="main-link">
+				<div class=" nav-menu-menu ps-4 pt-1 pb-1">
+					<!--<img src="{% static '/assets/img/menu.png' %}" height="12" width="12" class="me-2"-->Merchant Information
+				</div>
+				<div class="nav-menu-in" >
+					<a href="registration" class=" text-decoration-none p-3"><img src="{% static '/assets/img/registration.png' %}" height="18" width="18" class="ms-3 me-3">Registration</a>
+				</div>
+			</div>
+			<!-- EndMerchant -->
+
+			<!-- POS -->
+			<div class="main-link">
+				<div class=" nav-menu-menu ps-4 pt-1 pb-1">
+					<!--<img src="{% static '/assets/img/menu.png' %}" height="12" width="12" class="me-2"-->Point Of Sale Information
+				</div>
+				<div class="nav-menu-in" style="background: rgba(255, 255, 255, 0.1);">
+					<a href="add-new-pos" class=" text-decoration-none p-3"><img src="{% static '/assets/img/registration.png' %}" height="18" width="18" class="ms-3 me-3">Add New POS</a>
+				</div>
+				<div class="nav-menu-in">
+					<a href="" class=" text-decoration-none p-3"><img src="{% static '/assets/img/assign.png' %}" height="18" width="18" class="ms-3 me-3">Assign POS</a>
+				</div>
+				
+			</div>
+
+			<!-- EndPOS -->
+
+			<!-- User Account Management-->
+
+			<div class="main-link">
+				<div class=" nav-menu-menu ps-4 pt-1 pb-1">
+					<!--<img src="{% static '/assets/img/menu.png' %}" height="12" width="12" class="me-2"-->User Management
+				</div>
+				<div class="nav-menu-in">
+					<a href="add-new-user" class=" text-decoration-none p-3"><img src="{% static '/assets/img/registration.png' %}" height="18" width="18" class="ms-3 me-3">New User</a>
+				</div>
+				<div class="nav-menu-in">
+					<a href="" class=" text-decoration-none p-3"><img src="{% static '/assets/img/registration.png' %}" height="18" width="18" class="ms-3 me-3">Edit Account</a>
+				</div>
+				
+			</div>
+
+			<!-- EndUser Account Management -->
+			
+		</section>
+		<section class="ps-5 pt-4 pe-5 ">
+				<div class="page-head mb-4">
+					New POS Registration<br>
+					<p><span class="text-decoration-none">POS</span> > <a href=""class="text-decoration-none">New</a></p>
+				</div>
+				<form class="row g-3 needs-validation" novalidate action="add-new-pos" method="POST">
+					{% csrf_token %}
+					<div class="head col-md-12 p-2">
+				  		POS Information
+				  	</div>
+				   	<div class="col-md-4">
+				    	<label for="validationCustom01" class="form-label">Terminal ID</label>
+				    	<input type="text" class="form-control" id="validationCustom01" placeholder="POS ID" name="terminal_id" required>
+				  	</div>
+				  	<div class="col-md-8">
+				    	<label for="validationCustom01" class="form-label">Terminal Name</label>
+				    	<input type="text" class="form-control" id="validationCustom01" placeholder="Terminal Name" name="terminal_name" required>
+				  	</div>
+				  	<div class="col-md-4">
+				    	<label for="validationCustom02" class="form-label">Brand</label>
+				    	<input type="text" class="form-control" id="validationCustom02" 	placeholder="POS Brand" name="terminal_brand" required>
+				  	</div>
+				  	<div class="col-md-4">
+				    	<label for="validationCustom02" class="form-label">Serial Number</label>
+				    	<input type="text" class="form-control" id="validationCustom02" placeholder="Serial Number" name="terminal_serial_number" required>
+				  	</div>
+				  	<div class="col-md-4">
+				    	<label for="validationCustom02" class="form-label">Model</label>
+				    	<input type="text" class="form-control" id="validationCustom02" 	placeholder="POS Model" name="terminal_model" required>
+				  	</div>
+				  	<div class="head col-md-12 p-2">
+				  		Network Details
+				  	</div>
+				  	<div class="col-md-4">
+					    <label for="validationCustom04" class="form-label">Network Type</label>
+					    <select class="form-select" id="validationCustom04" name="network_type" required>
+						      <option>Choose...</option>
+						      <option value="MTN">MTN</option>
+						      <option value="Telecel">Telecel</option>
+						      <option value="AirtelTigo">AirtelTigo</option>
+					    </select>
+				  	</div>
+				  	<div class="col-md-4">
+					    <label for="validationCustom04" class="form-label">Connection Type</label>
+					    <select class="form-select" id="validationCustom04" name="connect_type" required>
+						      <option>Choose...</option>
+						      <option value="Edge">Edge</option>
+						      <option value="2G">2G</option>
+						      <option value="3G">3G</option>
+					    </select>
+				 	</div>
+				  	<div class="col-md-4">
+				    	<label for="validationCustom02" class="form-label">Sim Serial Number</label>
+					    <input type="text" class="form-control" id="validationCustom02" placeholder="Sim Serial Number" name="sim_serial_number" required>
+					 </div>
+				  	<div class="head col-md-12 p-2">
+				  		Payment Collections Details
+				  	</div>
+				   	<div class="col-md-8">
+				    	<label for="validationCustom02" class="form-label">Collection Account Number</label>
+					    <input type="number" class="form-control col-md-8" id="validationCustom02"placeholder="eg. 001009847490" name="account_number" required>
+					</div>
+			
+				  	<div class="col-12">
+				    	<input class="btn text-light" type="submit" name="sign_up">
+				  	</div>
+				</form>
+		</section>
+	</main>
+</html>

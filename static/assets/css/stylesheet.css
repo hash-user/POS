@@ -1,0 +1,43 @@
+.main_manual {
+	height: 840px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form_manual {
+	width: 480px;
+	
+	overflow: hidden;
+}
+
+.form_head {
+	background: #10143f;
+}
+
+.form_manual h3 {
+	font-weight: 700;
+	color: rgba(255, 255, 255, 1.0);
+}
+
+.error {
+	color: rgba(255, 0, 0, 1.0);
+}
+
+input[type='submit'] {
+	background: #10143f;
+	color: rgba(255, 255, 255, 1.0);
+	border-radius: 4px;
+	margin-left: calc(100%/2.5);
+}
+
+input[type='submit']:hover {
+	background: rgba(255, 255, 255, 1.0);
+	color: #10143f;
+	font-weight: 600;
+	border: 0.5px solid #10143f;
+}
+
+
+-- User left side navigation page --

@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static '/assets/css/dashboard.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title></title>
+	{% load bootstrap5 %}
+  	{% bootstrap_css %}
+  	{% bootstrap_javascript %}
+
+</head>
+<body>
+	<header class="shadow-lg">
+		<nav class="navbar bg-body-tertiary">
+		  <div class="container-fluid ps-5">
+		    <a class="navbar-brand" href="/dashboard">
+		      <img src="{% static '/assets/img/OmniBSIC-Bank-logo.png' %}" alt="OmniBSIC-Bank-logo" height="50" width="100%">
+		    </a>
+		  </div>
+		</nav>
+	</header>
+	<main>
+		<section class="nav-menu">
+
+			<!-- Merchant -->
+
+			<div class=" nav-menu-menu ps-4 pt-1 pb-1">
+				<!--<img src="{% static '/assets/img/menu.png' %}" height="12" width="12" class="me-2"-->Dashboard
+			</div>
+			<div class="nav-menu-in" style="background: rgba(255, 255, 255, 0.1);">
+				<a href="dashboard" class=" text-decoration-none p-3"><img src="{% static '/assets/img/dashboard-icon.png' %}" height="18" width="18" class="ms-3 me-3">Dashboard</a>
+			</div>
+			<div class="nav-menu-in" >
+					<a href="searchinfo" class=" text-decoration-none p-3"><img src="{% static '/assets/img/search.png' %}" height="18" width="18" class="ms-3 me-3">Inquiry</a>
+				</div>
+			<div class="main-link">
+				<div class=" nav-menu-menu ps-4 pt-1 pb-1">
+					<!--<img src="{% static '/assets/img/menu.png' %}" height="12" width="12" class="me-2"-->Merchant Information
+				</div>
+				<div class="nav-menu-in" >
+					<a href="registration" class=" text-decoration-none p-3"><img src="{% static '/assets/img/registration.png' %}" height="18" width="18" class="ms-3 me-3">Registration</a>
+				</div>
+			</div>
+			<!-- EndMerchant -->
+
+			<!-- POS -->
+			<div class="main-link">
+				<div class=" nav-menu-menu ps-4 pt-1 pb-1">
+					<!--<img src="{% static '/assets/img/menu.png' %}" height="12" width="12" class="me-2"-->Point Of Sale Information
+				</div>
+				<div class="nav-menu-in">
+					<a href="add-new-pos" class=" text-decoration-none p-3"><img src="{% static '/assets/img/registration.png' %}" height="18" width="18" class="ms-3 me-3">Add New POS</a>
+				</div>
+				<div class="nav-menu-in">
+					<a href="" class=" text-decoration-none p-3"><img src="{% static '/assets/img/assign.png' %}" height="18" width="18" class="ms-3 me-3">Assign POS</a>
+				</div>
+				
+			</div>
+
+			<!-- EndPOS -->
+
+			<!-- User Account Management-->
+
+			<div class="main-link">
+				<div class=" nav-menu-menu ps-4 pt-1 pb-1">
+					<!--<img src="{% static '/assets/img/menu.png' %}" height="12" width="12" class="me-2"-->User Management
+				</div>
+				<div class="nav-menu-in">
+					<a href="add-new-user" class=" text-decoration-none p-3"><img src="{% static '/assets/img/registration.png' %}" height="18" width="18" class="ms-3 me-3">New User</a>
+				</div>
+				<div class="nav-menu-in">
+					<a href="" class=" text-decoration-none p-3"><img src="{% static '/assets/img/registration.png' %}" height="18" width="18" class="ms-3 me-3">Edit Account</a>
+				</div>
+				
+			</div>
+
+			<!-- EndUser Account Management -->
+			
+		</section>
+		<section>
+			
+		</section>
+	</main>
+</html>
